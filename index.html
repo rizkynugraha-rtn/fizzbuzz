@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fizz or Buzz</title>
+  </head>
+  <body>
+    <h1>Get a FizzBuzz Result!</h1>
+
+    <form method="post"></form>
+    <label for="inputNumber">Type a number:</label>
+    
+    <input type="number" id="inputNumber" />
+     <button>Click Here!</button> 
+    </form>
+    <br>
+    <br>
+    <hr />
+
+    <p id="printResult"></p>
+
+  </body>
+
+  <script>
+    const messageWelcome = "Hello, welcome to FizzBuzz app, Start Play?";
+    alert(messageWelcome);
+
+      const btn = document.querySelector('button');
+      
+      btn.addEventListener('click', function () {
+        const number = document.getElementById("inputNumber").value;
+        const isValidated = false;
+
+        /** Minimasi Error 0 **/
+        
+        
+       
+
+        if(number <= 0) { 
+          alert("number inputted cannot be less than or equal with `0` | Please try to input another number :)");
+        
+        /** Function FizzBuzz**/
+        } else if (number%3===0){
+          alert("FIZZ!");
+            const divP = document.getElementById("printResult");
+            const paragraph = document.createElement("p");
+            paragraph.innerHTML = "FIZZ!";
+            divP.append(paragraph);
+        } else if(number%5===0) {
+           alert("BUZZ!");
+            const divP = document.getElementById("printResult");
+            const paragraph = document.createElement("p");
+            paragraph.innerHTML = "BUZZ!";
+            divP.append(paragraph);
+        } else {
+            alert(`${number} | Try input another number, until you got BUZZ or FIZZ  :)`);
+            const divP = document.getElementById("printResult");
+            const paragraph = document.createElement("p");
+            paragraph.innerHTML = number;
+            divP.append(paragraph);
+        };
+
+      });
+      
+   
+
+
+  </script>
+</html>
